@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Puzzle 2 - The Cyber Vault Challenge</title>
+    <style>
+        body {
+            font-family: 'Courier New', monospace;
+            background: linear-gradient(135deg, #0c0c0c, #1a1a2e, #16213e);
+            color: #00ff41;
+            margin: 0;
+            padding: 20px;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container {
+            max-width: 800px;
+            background: rgba(0, 0, 0, 0.8);
+            border: 2px solid #00ff41;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 0 20px rgba(0, 255, 65, 0.3);
+        }
+        h1 {
+            text-align: center;
+            color: #ff4444;
+            font-size: 2.5em;
+            text-shadow: 0 0 10px rgba(255, 68, 68, 0.5);
+            margin-bottom: 20px;
+        }
+        .success {
+            background: rgba(0, 255, 65, 0.2);
+            padding: 15px;
+            border-left: 4px solid #00ff41;
+            margin: 20px 0;
+        }
+        .puzzle {
+            background: rgba(0, 255, 65, 0.1);
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 5px;
+            border: 1px solid #00ff41;
+        }
+        .code {
+            background: #000;
+            padding: 10px;
+            font-family: 'Courier New', monospace;
+            color: #00ff41;
+            border-radius: 3px;
+            margin: 10px 0;
+        }
+        .warning {
+            color: #ffaa00;
+            text-align: center;
+            font-weight: bold;
+            animation: blink 2s infinite;
+        }
+        @keyframes blink {
+            0%, 50% { opacity: 1; }
+            51%, 100% { opacity: 0.3; }
+        }
+        .start-btn {
+            display: block;
+            width: 200px;
+            margin: 30px auto;
+            padding: 15px;
+            background: #ff4444;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: all 0.3s;
+        }
+        .start-btn:hover {
+            background: #ff6666;
+            box-shadow: 0 0 15px rgba(255, 68, 68, 0.5);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🔓 DOOR 1 UNLOCKED 🔓</h1>
+        
+        <div class="success">
+            <h2>✅ SECURITY CLEARANCE LEVEL 1 ACHIEVED</h2>
+            <p>Excellent work, Agent! You've successfully extracted the first key. The vault's first layer of defense has been breached.</p>
+        </div>
+
+        <div class="puzzle">
+            <h3>🧩 PUZZLE #2: Decrypt the Frequency Code</h3>
+            <p><strong>Topic:</strong> Character Counting & String Processing</p>
+            <p><strong>Sample Example:</strong></p>
+            <div class="code">String sample = "Hello World";
+// Convert to uppercase: "HELLO WORLD"
+// Count each letter (ignore spaces/symbols):
+// H:1, E:1, L:3, O:2, W:1, R:1, D:1
+// Most frequent: L (appears 3 times)
+// Answer format: L3</div>
+            <p><strong>Your Challenge:</strong> Get the text of James Chapter 1 (NIV) and find the most frequent letter + its count.</p>
+            <p><strong>Text Source:</strong> <a href="https://www.biblegateway.com/passage/?search=James%201&version=NIV" target="_blank" style="color: #00ff41;">BibleGateway.com - James 1 NIV</a></p>
+            <p><strong>Method:</strong></p>
+            <ol>
+                <li>Copy the text of James Chapter 1 (NIV)</li>
+                <li>Convert all text to uppercase</li>
+                <li>Count only letters (A-Z), ignore spaces, punctuation, and numbers</li>
+                <li>Find the letter with the highest count</li>
+                <li>Format as: [LETTER][COUNT] (e.g., E45)</li>
+            </ol>
+        </div>
+
+        <div class="warning">
+            ⚠️ ANALYZING BIBLICAL FREQUENCY PATTERNS ⚠️<br>
+            DECODE THE SCRIPTURE TO PROCEED
+        </div>
+
+        <p style="text-align: center; margin-top: 30px;">
+            <strong>Instructions:</strong> Find the most frequent letter and its count, then navigate to:<br>
+            <span style="color: #ffaa00;">nemoyatpeace.github.io/escape_room/[LETTER][COUNT].html</span><br>
+            <small>(Use uppercase letter + count, e.g., E45.html)</small>
+        </p>
+
+        <a href="#" class="start-btn" onclick="showHint()">NEED A HINT?</a>
+        
+        <div id="hint" style="display: none; background: rgba(255, 170, 0, 0.1); padding: 15px; border-radius: 5px; margin-top: 20px;">
+            <p><strong>💡 HINT:</strong> Create an int array of size 26 to count A-Z.</p>
+            <p>Use <code>charAt(i) - 'A'</code> to get the array index for each letter.</p>
+            <p>After counting, find the maximum value and its corresponding letter.</p>
+            <p>Format: If E appears 45 times → navigate to E45.html</p>
+        </div>
+    </div>
+
+    <script>
+        function showHint() {
+            document.getElementById('hint').style.display = 'block';
+        }
+    </script>
+</body>
+</html>
