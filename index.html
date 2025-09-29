@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Cyber Vault Challenge</title>
+    <style>
+        body {
+            font-family: 'Courier New', monospace;
+            background: linear-gradient(135deg, #0c0c0c, #1a1a2e, #16213e);
+            color: #00ff41;
+            margin: 0;
+            padding: 20px;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container {
+            max-width: 800px;
+            background: rgba(0, 0, 0, 0.8);
+            border: 2px solid #00ff41;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 0 20px rgba(0, 255, 65, 0.3);
+        }
+        h1 {
+            text-align: center;
+            color: #ff4444;
+            font-size: 2.5em;
+            text-shadow: 0 0 10px rgba(255, 68, 68, 0.5);
+            margin-bottom: 20px;
+        }
+        .scenario {
+            background: rgba(255, 68, 68, 0.1);
+            padding: 20px;
+            border-left: 4px solid #ff4444;
+            margin: 20px 0;
+        }
+        .puzzle {
+            background: rgba(0, 255, 65, 0.1);
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 5px;
+            border: 1px solid #00ff41;
+        }
+        .code {
+            background: #000;
+            padding: 10px;
+            font-family: 'Courier New', monospace;
+            color: #00ff41;
+            border-radius: 3px;
+            margin: 10px 0;
+        }
+        .warning {
+            color: #ffaa00;
+            text-align: center;
+            font-weight: bold;
+            animation: blink 2s infinite;
+        }
+        @keyframes blink {
+            0%, 50% { opacity: 1; }
+            51%, 100% { opacity: 0.3; }
+        }
+        .start-btn {
+            display: block;
+            width: 200px;
+            margin: 30px auto;
+            padding: 15px;
+            background: #ff4444;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: all 0.3s;
+        }
+        .start-btn:hover {
+            background: #ff6666;
+            box-shadow: 0 0 15px rgba(255, 68, 68, 0.5);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🔒 THE CYBER VAULT CHALLENGE 🔒</h1>
+        
+        <div class="scenario">
+            <h2>📡 SCENARIO: The Cyber Vault Heist</h2>
+            <p>You are a cyber-agent trapped inside a high-security digital vault. The only way to escape is by decrypting and solving string-related programming puzzles that protect the system.</p>
+            <p>Each solved puzzle unlocks a new door leading you closer to freedom. Can you escape before the system locks you in forever?</p>
+        </div>
+
+        <div class="puzzle">
+            <h3>🧩 PUZZLE #1: Extract the Secret Key</h3>
+            <p><strong>Topic:</strong> Substrings & Character Filtering</p>
+            <p><strong>Sample Example:</strong></p>
+            <div class="code">String sampleKey = "###ACCESS##GRANTED###";
+// Extract only letters: ACCESSGRANTED</div>
+            <p><strong>Your Challenge:</strong> Download the key file and extract only the letters (remove all symbols).</p>
+            <p><strong>Key File:</strong> <a href="key1.txt" style="color: #00ff41;" download>key1.txt</a></p>
+            <p><strong>Method:</strong> Loop through each character and keep only letters (a-z, A-Z).</p>
+            <p><strong>Important:</strong> Remove all spaces and symbols - keep letters only!</p>
+        </div>
+
+        <div class="warning">
+            ⚠️ SECURITY SYSTEM ENGAGED ⚠️<br>
+            SOLVE THE PUZZLE TO PROCEED TO THE NEXT LEVEL
+        </div>
+
+        <p style="text-align: center; margin-top: 30px;">
+            <strong>Instructions:</strong> Solve the puzzle above, then navigate to:<br>
+            <span style="color: #ffaa00;">nemoyatpeace.github.io/escape_room/[YOUR-ANSWER-HERE].html</span><br>
+            <small>(Use all lowercase letters only)</small>
+        </p>
+
+        <a href="#" class="start-btn" onclick="showHint()">NEED A HINT?</a>
+        
+        <div id="hint" style="display: none; background: rgba(255, 170, 0, 0.1); padding: 15px; border-radius: 5px; margin-top: 20px;">
+            <p><strong>💡 HINT:</strong> Use Character.isLetter() to check if a character is a letter.</p>
+            <p>Your final answer should be all lowercase with no spaces or symbols.</p>
+            <p>Example format: jesusopensdoors.html</p>
+        </div>
+    </div>
+
+    <script>
+        function showHint() {
+            document.getElementById('hint').style.display = 'block';
+        }
+    </script>
+</body>
+</html>
