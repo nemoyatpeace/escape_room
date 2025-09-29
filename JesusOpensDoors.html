@@ -126,10 +126,12 @@
         <a href="#" class="start-btn" onclick="showHint()">NEED A HINT?</a>
         
         <div id="hint" style="display: none; background: rgba(255, 170, 0, 0.1); padding: 15px; border-radius: 5px; margin-top: 20px;">
-            <p><strong>💡 HINT:</strong> Create an int array of size 26 to count A-Z.</p>
-            <p>Use <code>charAt(i) - 'A'</code> to get the array index for each letter.</p>
-            <p>After counting, find the maximum value and its corresponding letter.</p>
-            <p>Format: If E appears 45 times → navigate to E45.html</p>
+            <p><strong>💡 HINT:</strong> Use nested loops to count each letter individually.</p>
+            <p>Outer loop: for each letter A-Z<br>
+            Inner loop: count how many times that letter appears in the text</p>
+            <p><strong>Important:</strong> Only count the actual Bible text - ignore headers, verse numbers, and footnotes!</p>
+            <p>Use <code>Character.toUpperCase()</code> and <code>Character.isLetter()</code> methods.</p>
+            <p>Format: If E appears 88 times → navigate to E88.html</p>
         </div>
     </div>
 
