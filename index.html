@@ -95,8 +95,8 @@
             <h3>🧩 PUZZLE #1: Extract the Secret Key</h3>
             <p><strong>Topic:</strong> Substrings & Character Filtering</p>
             <p><strong>Sample Example:</strong></p>
-            <div class="code">String sampleKey = "###ACCESS##GRANTED###";
-// Extract only letters: ACCESSGRANTED</div>
+            <div class="code">String sampleKey = "###Access$##Granted@%^#";
+// Extract only letters: AccessGranted</div>
             <p><strong>Your Challenge:</strong> Download the key file and extract only the letters (remove all symbols).</p>
             <p><strong>Key File:</strong> <a href="key1.txt" style="color: #00ff41;" download>key1.txt</a></p>
             <p><strong>Method:</strong> Loop through each character and keep only letters (a-z, A-Z).</p>
@@ -118,8 +118,8 @@
         
         <div id="hint" style="display: none; background: rgba(255, 170, 0, 0.1); padding: 15px; border-radius: 5px; margin-top: 20px;">
             <p><strong>💡 HINT:</strong> Use Character.isLetter() to check if a character is a letter.</p>
-            <p>Your final answer should be all lowercase with no spaces or symbols.</p>
-            <p>Example format: jesusopensdoors.html</p>
+            <p>Your final answer should be all letters with no spaces or symbols.</p>
+            <p>Example format: HelloWorld.html</p>
         </div>
     </div>
 
