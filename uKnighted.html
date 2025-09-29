@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Puzzle 5 - The Cyber Vault Challenge</title>
+    <style>
+        body {
+            font-family: 'Courier New', monospace;
+            background: linear-gradient(135deg, #0c0c0c, #1a1a2e, #16213e);
+            color: #00ff41;
+            margin: 0;
+            padding: 20px;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container {
+            max-width: 800px;
+            background: rgba(0, 0, 0, 0.8);
+            border: 2px solid #00ff41;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 0 20px rgba(0, 255, 65, 0.3);
+        }
+        h1 {
+            text-align: center;
+            color: #ff4444;
+            font-size: 2.5em;
+            text-shadow: 0 0 10px rgba(255, 68, 68, 0.5);
+            margin-bottom: 20px;
+        }
+        .success {
+            background: rgba(0, 255, 65, 0.2);
+            padding: 15px;
+            border-left: 4px solid #00ff41;
+            margin: 20px 0;
+        }
+        .puzzle {
+            background: rgba(0, 255, 65, 0.1);
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 5px;
+            border: 1px solid #00ff41;
+        }
+        .code {
+            background: #000;
+            padding: 10px;
+            font-family: 'Courier New', monospace;
+            color: #00ff41;
+            border-radius: 3px;
+            margin: 10px 0;
+            line-height: 1.4;
+        }
+        .warning {
+            color: #ffaa00;
+            text-align: center;
+            font-weight: bold;
+            animation: blink 2s infinite;
+        }
+        @keyframes blink {
+            0%, 50% { opacity: 1; }
+            51%, 100% { opacity: 0.3; }
+        }
+        .start-btn {
+            display: block;
+            width: 200px;
+            margin: 30px auto;
+            padding: 15px;
+            background: #ff4444;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: all 0.3s;
+        }
+        .start-btn:hover {
+            background: #ff6666;
+            box-shadow: 0 0 15px rgba(255, 68, 68, 0.5);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🔓 DOOR 4 UNLOCKED 🔓</h1>
+        
+        <div class="success">
+            <h2>✅ CAESAR CIPHER DECODED</h2>
+            <p>Exceptional work, Agent! You've broken the Caesar cipher. Only one final security layer remains between you and freedom.</p>
+        </div>
+
+        <div class="puzzle">
+            <h3>🧩 PUZZLE #5: Detect the Hidden Pattern</h3>
+            <p><strong>Topic:</strong> String Matching & Pattern Recognition</p>
+            <p><strong>Sample Example:</strong></p>
+            <div class="code">String logs = "SYS1001: OK, SYS1002: ERROR, SYSX03: 4C0D3, SYS1004: WARNING, SYS1005: 8HI3";
+// Look for entries mixing letters and numbers: 4C0D3, 8HI3
+// Pattern: contains both letters AND numbers</div>
+            <p><strong>Your Challenge:</strong> Download the system logs and find the entry that contains BOTH letters and numbers mixed together.</p>
+            <p><strong>Log File:</strong> <a href="systemlogs.txt" style="color: #00ff41;" download>systemlogs.txt</a></p>
+            <p><strong>Method:</strong> Check each entry to find one that has both alphabetic characters AND numeric digits.</p>
+            <p><strong>Important:</strong> Look for the actual mixed alphanumeric code, not the status message!</p>
+            <p><strong>Solution:</strong> 4C0D38HI3</p>
+        </div>
+
+        <div class="warning">
+            ⚠️ SCANNING FOR ANOMALOUS PATTERNS ⚠️<br>
+            LOCATE THE HIDDEN CODE TO ESCAPE
+        </div>
+
+        <p style="text-align: center; margin-top: 30px;">
+            <strong>Instructions:</strong> Find the mixed alphanumeric code, then navigate to:<br>
+            <span style="color: #ffaa00;">nemoyatpeace.github.io/escape_room/[PATTERN-CODE].html</span><br>
+            <small>(Use exact case as found in the logs)</small>
+        </p>
+
+        <a href="#" class="start-btn" onclick="showHint()">NEED A HINT?</a>
+        
+        <div id="hint" style="display: none; background: rgba(255, 170, 0, 0.1); padding: 15px; border-radius: 5px; margin-top: 20px;">
+            <p><strong>💡 HINT:</strong> Use a loop to check each character in the file.</p>
+            <p>Everytime you find ": ", check the next chunk of characters.</p>
+            <p>If it has both a letter and a digit before the next space, include it in the answer</p>
+            
+            <p>Combine any codes with BOTH to form your answer.</p>
+        </div>
+    </div>
+
+    <script>
+        function showHint() {
+            document.getElementById('hint').style.display = 'block';
+        }
+    </script>
+</body>
+</html>
