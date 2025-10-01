@@ -1,0 +1,178 @@
+<script>
+        function showFinalHint() {
+            document.getElementById('finalHint').style.display = 'block';
+        }
+    </script><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Final Challenge - The Cyber Vault Challenge</title>
+    <style>
+        body {
+            font-family: 'Courier New', monospace;
+            background: linear-gradient(135deg, #0c0c0c, #1a1a2e, #16213e);
+            color: #00ff41;
+            margin: 0;
+            padding: 20px;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container {
+            max-width: 900px;
+            background: rgba(0, 0, 0, 0.8);
+            border: 2px solid #00ff41;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 0 20px rgba(0, 255, 65, 0.3);
+        }
+        h1 {
+            text-align: center;
+            color: #ff4444;
+            font-size: 2.5em;
+            text-shadow: 0 0 10px rgba(255, 68, 68, 0.5);
+            margin-bottom: 20px;
+        }
+        .success {
+            background: rgba(0, 255, 65, 0.2);
+            padding: 15px;
+            border-left: 4px solid #00ff41;
+            margin: 20px 0;
+        }
+        .final-puzzle {
+            background: rgba(255, 68, 68, 0.2);
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 5px;
+            border: 2px solid #ff4444;
+        }
+        .clue-box {
+            background: rgba(255, 170, 0, 0.1);
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border-left: 4px solid #ffaa00;
+        }
+        .code {
+            background: #000;
+            padding: 10px;
+            font-family: 'Courier New', monospace;
+            color: #00ff41;
+            border-radius: 3px;
+            margin: 10px 0;
+        }
+        .warning {
+            color: #ffaa00;
+            text-align: center;
+            font-weight: bold;
+            animation: blink 2s infinite;
+            font-size: 1.2em;
+        }
+        @keyframes blink {
+            0%, 50% { opacity: 1; }
+            51%, 100% { opacity: 0.3; }
+        }
+        .escape-btn {
+            display: block;
+            width: 300px;
+            margin: 30px auto;
+            padding: 20px;
+            background: linear-gradient(45deg, #ff4444, #ff6666);
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 10px;
+            font-weight: bold;
+            font-size: 1.3em;
+            transition: all 0.3s;
+            border: 2px solid #ff4444;
+        }
+        .escape-btn:hover {
+            background: linear-gradient(45deg, #ff6666, #ff8888);
+            box-shadow: 0 0 20px rgba(255, 68, 68, 0.7);
+            transform: scale(1.05);
+        }
+        .clue-number {
+            color: #ff4444;
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🚨 FINAL CHALLENGE 🚨</h1>
+        
+        <div class="success">
+            <h2>✅ ALL SECURITY LAYERS BREACHED</h2>
+            <p>Incredible work, Agent! You've successfully penetrated all five security layers of the Cyber Vault. Now comes the final test - assembling the master escape code.</p>
+        </div>
+
+        <div class="final-puzzle">
+            <h3>🔐 ASSEMBLE THE ESCAPE CODE</h3>
+            <p><strong>Mission:</strong> You've solved the basic challenges, but the vault requires deeper analysis. Go back to each puzzle's data and extract additional information using the clues below. Only then can you assemble the complete escape sequence!</p>
+            
+            <div class="clue-box">
+                <span class="clue-number">PUZZLE 1:</span> Extract the Secret Key<br>
+                <strong>Clue:</strong> Count the symbols between the 1st and 5th letters in the key<br>
+                <em>From analyzing "key1.txt" → [COUNT]</em>
+            </div>
+            
+            <div class="clue-box">
+                <span class="clue-number">PUZZLE 2:</span> Frequency Analysis<br>
+                <strong>Clue:</strong> All letters that appear less than 10 times (alphabetical order)<br>
+                <em>From James 1 frequency analysis → [RARE_LETTERS]</em>
+            </div>
+            
+            <div class="clue-box">
+                <span class="clue-number">PUZZLE 3:</span> String Reversal<br>
+                <strong>Clue:</strong> Extract only the uppercase letters from the reversed string<br>
+                <em>From "InternationalComunitySchool" → [UPPERCASE_ONLY]</em>
+            </div>
+            
+            <div class="clue-box">
+                <span class="clue-number">PUZZLE 4:</span> Caesar Cipher<br>
+                <strong>Clue:</strong> Apply position-based Caesar shift to decrypted message<br>
+                <strong>Rule:</strong> Shift each letter by its position (0-indexed): position 0 → shift 0, position 1 → shift 1, etc.<br>
+                <em>From "uKnighted" → [SHIFTED_STRING]</em>
+            </div>
+            
+            <div class="clue-box">
+                <span class="clue-number">PUZZLE 5:</span> Pattern Detection<br>
+                <strong>Clue:</strong> Combine the SYS numbers for all mixed alphanumeric entries<br>
+                <em>From system logs (SYS####: pattern) → [SYSNUMS_COMBINED]</em>
+            </div>
+            
+            <div class="code">
+                <strong>FINAL ESCAPE CODE:</strong> [COUNT] + [RARE_LETTERS] + [UPPERCASE] + [SHIFTED] + [SYSNUMS] = <span style="color: #ff4444;">[ASSEMBLY_REQUIRED]</span>
+            </div>
+        </div>
+
+        <div class="warning">
+            ⚠️ VAULT LOCKDOWN IMMINENT ⚠️<br>
+            ENTER ESCAPE CODE TO ACHIEVE FREEDOM
+        </div>
+
+        <p style="text-align: center; margin-top: 30px;">
+            <strong>Instructions:</strong> Use the assembled code to escape:<br>
+            <span style="color: #ffaa00;">nemoyatpeace.github.io/escape_room/[ESCAPE-CODE].html</span><br>
+            <small>(Combine all clues in exact order)</small>
+        </p>
+
+        <a href="#" class="escape-btn" onclick="showFinalHint()">🚀 NEED ASSEMBLY HELP? 🚀</a>
+        
+        <div id="finalHint" style="display: none; background: rgba(255, 170, 0, 0.1); padding: 20px; border-radius: 5px; margin-top: 20px;">
+            <p><strong>💡 ASSEMBLY HINTS:</strong></p>
+            <p><strong>Puzzle 1:</strong> In key1.txt, find 1st letter and 5th letter positions. Count symbols between them.</p>
+            <p><strong>Puzzle 2:</strong> Count all letters in James 1. List letters with count &lt; 10 in alphabetical order.</p>
+            <p><strong>Puzzle 3:</strong> From "InternationalComunitySchool", extract only uppercase letters.</p>
+            <p><strong>Puzzle 4:</strong> Apply Caesar shift where shift = character position (0-indexed):<br>
+            &nbsp;&nbsp;Position 0: shift by 0, Position 1: shift by 1, Position 2: shift by 2, etc.</p>
+            <p><strong>Puzzle 5:</strong> Find entries like "SYS1042: B1BL3". Combine just the numbers: 1042.</p>
+            <p><strong>Final Code:</strong> Concatenate everything with no spaces or separators.</p>
+        </div>
+    </div>
+</body>
+</html>
