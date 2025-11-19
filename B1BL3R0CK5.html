@@ -135,7 +135,7 @@
             <div class="clue-box">
                 <span class="clue-number">PUZZLE 4:</span> Caesar Cipher<br>
                 <strong>Clue:</strong> Apply position-based Caesar shift to decrypted message<br>
-                <strong>Rule:</strong> Shift each letter by its position (0-indexed): position 0 → shift 0, position 1 → shift 1, etc.<br>
+                <strong>Rule:</strong> Shift each letter by its position: position 1 → shift 1, position 2 → shift 2, etc.<br>
                 <em>From "uKnighted" → [SHIFTED_STRING]</em>
             </div>
             
@@ -168,8 +168,9 @@
             <p><strong>Puzzle 1:</strong> In key1.txt, find 1st letter and 5th letter positions (indexOf is a wonderful String method). Count symbols between them (be sure to exclude the letters).</p>
             <p><strong>Puzzle 2:</strong> Count all letters in James 1. List letters with count &lt; 10 in alphabetical order.</p>
             <p><strong>Puzzle 3:</strong> From "InternationalComunitySchool", extract only uppercase letters.</p>
-            <p><strong>Puzzle 4:</strong> Apply Caesar shift where shift = character position (0-indexed):<br>
-            &nbsp;&nbsp;Position 0: shift by 0, Position 1: shift by 1, Position 2: shift by 2, etc.</p>
+            <p><strong>Puzzle 4:</strong> Apply Caesar shift where shift = character position (1-indexed):<br>
+            &nbsp;&nbsp;The first letter should shift 1 position, we are using human counting, not computer counting.<br>
+            Make sure that if letters exceed the alphabet they wrap back to the beginning.</p>
             <p><strong>Puzzle 5:</strong> Find entries like "SYS1579: B1BL3". Combine just the numbers: 1579.</p>
             <p><strong>Final Code:</strong> Concatenate everything with no spaces or separators.</p>
         </div>
